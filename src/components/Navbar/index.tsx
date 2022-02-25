@@ -18,7 +18,7 @@ const Navbar = () => {
           <FaBars />
         </IconContainer>
       </NavbarContainer>
-      <Sidebar isShown={true} />
+      <Sidebar isShown={isSidebarShown} setIsShown={setIsSidebarShown} />
     </>
   );
 };

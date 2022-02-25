@@ -7,18 +7,20 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 
 interface IProps {
   isShown: boolean;
+  setIsShown: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const Sidebar = ({ isShown }: IProps) => {
+const Sidebar = ({ isShown, setIsShown }: IProps) => {
   const mainDropdownItems = [
     { title: "Strona główna", link: "/" },
     { title: "O nas", link: "/" },
     { title: "Opinie", link: "/" },
   ];
+
   return (
-    <SidebarContainer>
+    <SidebarContainer isShown={isShown}>
       <TopPanel>
-        <IoClose />
+        <IoClose onClick={() => setIsShown(false)} />
       </TopPanel>
 
       <SidebarList>

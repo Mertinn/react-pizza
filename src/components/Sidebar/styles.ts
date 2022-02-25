@@ -1,15 +1,20 @@
 import styled from "styled-components";
 import v from "../variables";
 
-export const SidebarContainer = styled.div`
+export const SidebarContainer = styled.div<{ isShown: boolean }>`
   background: #f6f6f6;
   position: fixed;
   top: 0;
   right: 0;
   height: 100vh;
-  box-shadow: -30vw 0 15px 10px rgba(0, 0, 0, 0.5);
   font-size: 1.2rem;
   min-width: 70vw;
+  box-shadow: ${(props) =>
+    props.isShown
+      ? "-30vw 0 15px 10px rgba(0, 0, 0, 0.5)"
+      : "0 0 0 0 rgba(0,0,0,0.5)"};
+  transform: translateX(${(props) => (props.isShown ? "0" : "100%")});
+  transition: 0.5s;
 `;
 
 export const TopPanel = styled.div`
