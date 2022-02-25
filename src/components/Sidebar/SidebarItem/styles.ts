@@ -24,6 +24,7 @@ export const DropdownContainer = styled.div<{
   overflow: hidden;
   transition: 0.5s;
   margin-left: 0.5em;
+  margin-top: 0.5em;
 `;
 
 export const DropdownList = styled.ul`

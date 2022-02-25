@@ -15,6 +15,7 @@ export const SidebarContainer = styled.div<{ isShown: boolean }>`
       : "0 0 0 0 rgba(0,0,0,0.5)"};
   transform: translateX(${(props) => (props.isShown ? "0" : "100%")});
   transition: 0.5s;
+  z-index: 999;
 `;
 
 export const TopPanel = styled.div`
