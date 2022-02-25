@@ -10,6 +10,11 @@ interface IProps {
 }
 
 const Sidebar = ({ isShown }: IProps) => {
+  const mainDropdownItems = [
+    { title: "Strona główna", link: "/" },
+    { title: "O nas", link: "/" },
+    { title: "Opinie", link: "/" },
+  ];
   return (
     <SidebarContainer>
       <TopPanel>
@@ -18,7 +23,11 @@ const Sidebar = ({ isShown }: IProps) => {
 
       <SidebarList>
         <li>
-          <SidebarItem title={"Start"} isDropdown={true} />
+          <SidebarItem
+            title={"Start"}
+            isDropdown={true}
+            dropdownItems={mainDropdownItems}
+          />
         </li>
         <li>
           <SidebarItem title={"Menu"} />

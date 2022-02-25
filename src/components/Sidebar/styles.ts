@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import v from "../variables";
 
 export const SidebarContainer = styled.div`
   background: #f6f6f6;
@@ -14,7 +15,7 @@ export const SidebarContainer = styled.div`
 export const TopPanel = styled.div`
   display: flex;
   justify-content: flex-end;
-  background: #539943;
+  background: ${v.green};
   color: white;
   padding: 0.9em;
   align-items: center;
