@@ -1,8 +1,15 @@
 import React from "react";
-import { StyledVideo, VideoSection, VideoSectionContent } from "./styles";
+import {
+  DefaultSection,
+  InfoContainer,
+  StyledVideo,
+  VideoSection,
+  VideoSectionContent,
+} from "./styles";
 import PizzaVideo from "../../assets/pizzaVideo.mp4";
 import Button from "../../components/Button";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import InfoBox from "../../components/InfoBox";
 
 const HomePage = () => {
   return (
@@ -20,6 +27,20 @@ const HomePage = () => {
           </Button>
         </VideoSectionContent>
       </VideoSection>
+
+      <DefaultSection>
+        <InfoContainer>
+          <InfoBox
+            title={"Godziny otwarcia"}
+            description={"Dzisiaj: 13:00-21:00"}
+          />
+          <InfoBox
+            title={"Godziny dostawy"}
+            description={"Dzisiaj: 13:00-20:40"}
+          />
+          <InfoBox title={"Kontakt"} description={"+48 000 000 000"} />
+        </InfoContainer>
+      </DefaultSection>
     </>
   );
 };

@@ -35,8 +35,8 @@ const SidebarItem = ({
           maxHeight={dropdownItems.length * 47}
         >
           <DropdownList>
-            {dropdownItems.map((item) => (
-              <li>
+            {dropdownItems.map((item, index) => (
+              <li key={index}>
                 <StyledLink to={item.link}>{item.title}</StyledLink>
               </li>
             ))}

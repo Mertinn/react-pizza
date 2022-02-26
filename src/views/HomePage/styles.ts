@@ -31,6 +31,18 @@ export const VideoSectionContent = styled.div`
     text-transform: uppercase;
   }
   p {
-    max-width: 80%;
+    max-width: 90%;
   }
+`;
+
+export const InfoContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 2em;
+  column-gap: 3em;
+  justify-content: center;
+`;
+
+export const DefaultSection = styled.section`
+  padding: 4em 1em;
 `;
