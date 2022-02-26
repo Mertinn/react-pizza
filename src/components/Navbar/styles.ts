@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import v from "../variables";
 
 export const NavbarContainer = styled.nav`
   background: white;
@@ -7,6 +8,7 @@ export const NavbarContainer = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 0.5em 2em;
+  height: ${v.navbarHeight};
 `;
 
 export const LogoContainer = styled.div`

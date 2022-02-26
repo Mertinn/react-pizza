@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import v from "../../components/variables";
 
 export const StyledVideo = styled.video`
   object-fit: cover;
@@ -10,8 +11,7 @@ export const StyledVideo = styled.video`
 `;
 
 export const VideoSection = styled.section`
-  // needs fix
-  //height: calc(100vh - 82.78px);
+  height: calc(100vh - ${v.navbarHeight});
   position: relative;
 `;
 

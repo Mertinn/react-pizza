@@ -24,6 +24,21 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+
+    <!--Font is moved here to prevent re-requesting font on every render-->
+    <style>
+      @font-face {
+      font-family: 'Lucida Grande';
+      src: url("LucidaGrande.ttf") format('truetype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: auto;
+    }
+
+    * {
+      font-family: "Lucida Grande", serif;
+    }
+    </style>
     <title>React App</title>
   </head>
   <body>
