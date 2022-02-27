@@ -7,6 +7,7 @@ export const InfoBoxContainer = styled.div`
   gap: 1em;
   font-size: 0.7rem;
   text-align: center;
+  padding: 2em;
 `;
 
 export const InfoBoxTitle = styled.h1`

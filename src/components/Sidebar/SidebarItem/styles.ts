@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Link } from "react-router-dom";
 import v from "../../variables";
 
@@ -16,18 +16,12 @@ export const SidebarItemHeader = styled.div`
   width: 100%;
 `;
 
-export const DropdownContainer = styled.div<{
-  isShown: boolean;
-  maxHeight: number;
-}>`
-  max-height: ${(props) => (props.isShown ? props.maxHeight + "px" : 0)};
-  overflow: hidden;
-  transition: 0.5s;
-  margin-left: 0.5em;
-  margin-top: 0.5em;
+export const dropdownItemStyles = css`
+  padding-left: 0.5em;
+  padding-top: 0.5em;
 `;
 
-export const DropdownList = styled.ul`
+export const StyledDropdownList = styled.ul`
   list-style-type: none;
 
   li::before {

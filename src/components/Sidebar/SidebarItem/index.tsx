@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { RiArrowDownSLine } from "react-icons/ri";
+import DropdownList from "../../DropdownList";
 import {
-  DropdownContainer,
-  DropdownList,
+  StyledDropdownList,
   SidebarItemContainer,
   SidebarItemHeader,
   StyledLink,
+  dropdownItemStyles,
 } from "./styles";
 
 interface IProps {
@@ -21,6 +22,10 @@ const SidebarItem = ({
 }: IProps) => {
   const [isShown, setIsShown] = useState(false);
 
+  const dropdownItemsNode = dropdownItems.map((item) => (
+    <StyledLink to={item.link}>{item.title}</StyledLink>
+  ));
+
   return (
     <SidebarItemContainer>
       <SidebarItemHeader
@@ -29,19 +34,14 @@ const SidebarItem = ({
         <p>{title}</p>
         {isDropdown && <RiArrowDownSLine />}
       </SidebarItemHeader>
+
       {isDropdown && (
-        <DropdownContainer
+        <DropdownList
+          List={StyledDropdownList}
+          elements={dropdownItemsNode}
           isShown={isShown}
-          maxHeight={dropdownItems.length * 47}
-        >
-          <DropdownList>
-            {dropdownItems.map((item, index) => (
-              <li key={index}>
-                <StyledLink to={item.link}>{item.title}</StyledLink>
-              </li>
-            ))}
-          </DropdownList>
-        </DropdownContainer>
+          containerStyles={dropdownItemStyles}
+        />
       )}
     </SidebarItemContainer>
   );

@@ -38,9 +38,13 @@ export const VideoSectionContent = styled.div`
 export const InfoContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  row-gap: 2em;
-  column-gap: 3em;
   justify-content: center;
+
+  @media (min-width: 700px) {
+    & > *:not(:last-child) {
+      border-right: 4px solid #ebebeb;
+    }
+  }
 `;
 
 export const DefaultSection = styled.section`
