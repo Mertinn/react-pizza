@@ -12,6 +12,15 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import InfoBox from "../../components/InfoBox";
 
 const HomePage = () => {
+  const openHours = [
+    { text: "Poniedziałek: 13:00-20:00" },
+    { text: "Wtorek: 13:00-20:00" },
+    { text: "Środa: 13:00-20:00" },
+    { text: "Czwartek: 13:00-20:00" },
+    { text: "Piątek: 13:00-20:00" },
+    { text: "Sobota: 13:00-21:00" },
+    { text: "Niedziela: 13:00-20:00" },
+  ];
   return (
     <>
       <VideoSection>
@@ -33,6 +42,8 @@ const HomePage = () => {
           <InfoBox
             title={"Godziny otwarcia"}
             description={"Dzisiaj: 13:00-21:00"}
+            isDropdown={true}
+            dropdownItems={openHours}
           />
           <InfoBox
             title={"Godziny dostawy"}

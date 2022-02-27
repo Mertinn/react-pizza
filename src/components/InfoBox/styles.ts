@@ -16,4 +16,14 @@ export const InfoBoxTitle = styled.h1`
 `;
 export const InfoBoxDescription = styled.h1`
   font-weight: normal;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+`;
+
+export const DropdownStyled = styled.ul`
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  font-size: 1.2em;
 `;

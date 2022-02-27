@@ -4,16 +4,23 @@ import { FlattenSimpleInterpolation } from "styled-components";
 
 interface IProps {
   elements: React.ReactNode[];
+  approxElementHeight?: number;
   List: React.FunctionComponent;
   isShown: boolean;
   containerStyles?: FlattenSimpleInterpolation;
 }
 
-const DropdownList = ({ elements, List, isShown, containerStyles }: IProps) => {
+const DropdownList = ({
+  elements,
+  List,
+  isShown,
+  containerStyles,
+  approxElementHeight = 45,
+}: IProps) => {
   return (
     <DropdownContainer
       isShown={isShown}
-      maxHeight={elements.length * 45}
+      maxHeight={elements.length * approxElementHeight}
       additionalStyles={containerStyles}
     >
       <List>

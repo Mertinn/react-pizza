@@ -41,6 +41,7 @@ const SidebarItem = ({
           elements={dropdownItemsNode}
           isShown={isShown}
           containerStyles={dropdownItemStyles}
+          approxElementHeight={45}
         />
       )}
     </SidebarItemContainer>
