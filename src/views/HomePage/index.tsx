@@ -1,15 +1,21 @@
 import React from "react";
 import {
   DefaultSection,
+  StyledLink,
   InfoContainer,
+  ReviewsHeader,
+  ReviewsTitle,
   StyledVideo,
   VideoSection,
   VideoSectionContent,
+  SmallSpacer,
+  ReviewsList,
 } from "./styles";
 import PizzaVideo from "../../assets/pizzaVideo.mp4";
 import Button from "../../components/Button";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import InfoBox from "../../components/InfoBox";
+import Review from "../../components/Review";
 
 const HomePage = () => {
   const openHours = [
@@ -51,9 +57,35 @@ const HomePage = () => {
           />
           <InfoBox title={"Kontakt"} description={"+48 000 000 000"} />
         </InfoContainer>
-      </DefaultSection>
 
-      <DefaultSection></DefaultSection>
+        <SmallSpacer />
+
+        <ReviewsHeader>
+          <ReviewsTitle>Opinie klientów</ReviewsTitle>
+          <p>99,2% klientów jest z nas zadowolonych!</p>
+          <StyledLink to={"/reviews"}>Zobacz wszystkie opinie</StyledLink>
+        </ReviewsHeader>
+
+        <ReviewsList>
+          <li>
+            <Review text={"Wspaniała pizza"} author={"Karolina"} />
+          </li>
+          <li>
+            <Review
+              text={"Świetna pizza, świeże składniki, doskonały smak. Polecam."}
+              author={"Marcin"}
+            />
+          </li>
+          <li>
+            <Review
+              text={
+                "Wszystko sprawnie i pysznie, jedyny minus do którego mogę się przyczepić to dokładniejsze czytanie zamówienia, bo nie dostałam dodatkowego sosu. Ale pizza przepyszna."
+              }
+              author={"Karolina"}
+            />
+          </li>
+        </ReviewsList>
+      </DefaultSection>
     </>
   );
 };

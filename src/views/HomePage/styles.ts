@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import v from "../../components/variables";
+import { Link } from "react-router-dom";
 
 export const StyledVideo = styled.video`
   object-fit: cover;
@@ -49,4 +50,32 @@ export const InfoContainer = styled.div`
 
 export const DefaultSection = styled.section`
   padding: 4em 1em;
+`;
+
+export const SmallSpacer = styled.div`
+  padding: 1em;
+`;
+
+export const ReviewsHeader = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+`;
+export const ReviewsTitle = styled.h1`
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+`;
+
+export const StyledLink = styled(Link)`
+  color: ${v.green};
+  text-decoration: none;
+`;
+
+export const ReviewsList = styled.ul`
+  margin: 2em 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 `;
