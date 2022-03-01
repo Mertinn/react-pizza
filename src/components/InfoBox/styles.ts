@@ -19,6 +19,9 @@ export const InfoBoxDescription = styled.h1`
   display: flex;
   align-items: center;
   gap: 0.5em;
+  svg {
+    transition: transform 400ms;
+  }
 `;
 
 export const DropdownStyled = styled.ul`

@@ -52,6 +52,8 @@ const HomePage = () => {
           <InfoBox title={"Kontakt"} description={"+48 000 000 000"} />
         </InfoContainer>
       </DefaultSection>
+
+      <DefaultSection></DefaultSection>
     </>
   );
 };

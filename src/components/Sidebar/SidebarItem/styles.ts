@@ -14,6 +14,10 @@ export const SidebarItemHeader = styled.div`
   align-items: center;
   gap: 0.2em;
   width: 100%;
+
+  svg {
+    transition: transform 400ms;
+  }
 `;
 
 export const dropdownItemStyles = css`

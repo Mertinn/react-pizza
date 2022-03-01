@@ -32,7 +32,13 @@ const SidebarItem = ({
         onClick={isDropdown ? () => setIsShown(!isShown) : undefined}
       >
         <p>{title}</p>
-        {isDropdown && <RiArrowDownSLine />}
+        {isDropdown && (
+          <RiArrowDownSLine
+            style={{
+              transform: `rotate(${isShown ? "180deg" : "0deg"})`,
+            }}
+          />
+        )}
       </SidebarItemHeader>
 
       {isDropdown && (

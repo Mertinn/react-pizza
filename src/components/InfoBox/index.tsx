@@ -34,6 +34,9 @@ const InfoBox = ({
         {isDropdown && (
           <RiArrowDownSLine
             onClick={() => setIsDropdownShown(!isDropdownShown)}
+            style={{
+              transform: `rotate(${isDropdownShown ? "180deg" : "0deg"})`,
+            }}
           />
         )}
       </InfoBoxDescription>
