@@ -24,8 +24,8 @@ const DropdownList = ({
       additionalStyles={containerStyles}
     >
       <List>
-        {elements.map((element) => (
-          <li>{element}</li>
+        {elements.map((element, index) => (
+          <li key={index}>{element}</li>
         ))}
       </List>
     </DropdownContainer>

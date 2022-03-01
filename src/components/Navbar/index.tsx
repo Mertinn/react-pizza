@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { IconContainer, LogoContainer, NavbarContainer } from "./styles";
 import PizzaLogo from "../../assets/logo.png";
 import { FaBars } from "react-icons/fa";
@@ -6,10 +6,26 @@ import Sidebar from "../Sidebar";
 
 const Navbar = () => {
   const [isSidebarShown, setIsSidebarShown] = useState(false);
+  const [isShrunk, setIsShrunk] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const { scrollY } = window;
+      setIsShrunk((isShrunk) => {
+        if (scrollY > 40 && !isShrunk) return true;
+        else if (scrollY < 41 && isShrunk) return false;
+
+        return isShrunk;
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>
-      <NavbarContainer>
+      <NavbarContainer isShrunk={isShrunk}>
         <LogoContainer>
           <img src={PizzaLogo} alt="Comic pizza" />
         </LogoContainer>

@@ -35,7 +35,7 @@ const SidebarItem = ({
         {isDropdown && (
           <RiArrowDownSLine
             style={{
-              transform: `rotate(${isShown ? "180deg" : "0deg"})`,
+              transform: `rotate(${isShown ? "-180deg" : "0deg"})`,
             }}
           />
         )}
