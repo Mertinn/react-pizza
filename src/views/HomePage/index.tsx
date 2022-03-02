@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import {
   DefaultSection,
   StyledLink,
@@ -10,6 +10,10 @@ import {
   VideoSectionContent,
   SmallSpacer,
   ReviewsList,
+  ImageContentContainer,
+  MenuSection,
+  BackgroundImage,
+  BackgroundImageContainer,
 } from "./styles";
 import PizzaVideo from "../../assets/pizzaVideo.mp4";
 import Button from "../../components/Button";
@@ -17,6 +21,8 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import InfoBox from "../../components/InfoBox";
 import Review from "../../components/Review";
 import AnimationContainer from "../../components/AnimationContainer";
+import MenuLogo from "../../assets/menuImage.png";
+import ColoredSpacer from "../../components/ColoredSpacer";
 
 const HomePage = () => {
   const openHours = [
@@ -95,7 +101,20 @@ const HomePage = () => {
         </AnimationContainer>
       </DefaultSection>
 
-      <DefaultSection></DefaultSection>
+      <MenuSection>
+        <BackgroundImageContainer>
+          <BackgroundImage src={MenuLogo} />
+          <AnimationContainer animationName={"zoom-in-up"}>
+            <ImageContentContainer>
+              <h1>Wybierz do pizzy 1 sos gratis</h1>
+              <ColoredSpacer width={"20%"} color="white" />
+              <Button>
+                MENU <MdKeyboardArrowRight size={"1.5em"} />
+              </Button>
+            </ImageContentContainer>
+          </AnimationContainer>
+        </BackgroundImageContainer>
+      </MenuSection>
     </>
   );
 };
