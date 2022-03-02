@@ -79,3 +79,7 @@ export const ReviewsList = styled.ul`
   flex-direction: column;
   gap: 1em;
 `;
+
+export const ImageContentContainer = styled.div<{ src: string }>`
+  background: ${(props) => props.src};
+`;
