@@ -12,8 +12,8 @@ const Navbar = () => {
     const handleScroll = () => {
       const { scrollY } = window;
       setIsShrunk((isShrunk) => {
-        if (scrollY > 40 && !isShrunk) return true;
-        else if (scrollY < 41 && isShrunk) return false;
+        if (scrollY > 0 && !isShrunk) return true;
+        else if (scrollY < 1 && isShrunk) return false;
 
         return isShrunk;
       });
