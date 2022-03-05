@@ -43,9 +43,13 @@ export const InfoContainer = styled.div`
   }
 `;
 
-export const DefaultSection = styled.section`
-  padding: 4em 1em 0 1em;
+export const DefaultSection = styled.section<{ marginOnTop?: boolean }>`
+  margin: ${(props) => (props.marginOnTop ? "4em" : 0)} 1em 0 1em;
 `;
+
+DefaultSection.defaultProps = {
+  marginOnTop: true,
+};
 
 export const SmallSpacer = styled.div`
   padding: 1em;
@@ -91,8 +95,8 @@ export const BackgroundImageContainer = styled.div`
   background: rgba(0, 0, 0, 0.8);
 `;
 
-export const MenuSection = styled.div`
-  padding-top: 4em;
+export const MenuSection = styled.section`
+  margin-top: 4em;
 `;
 
 export const ImageContentContainer = styled.div`
@@ -106,4 +110,9 @@ export const ImageContentContainer = styled.div`
     font-size: 1.5em;
     text-transform: uppercase;
   }
+`;
+
+export const ImageTilesContainer = styled.div`
+  margin-top: -5em;
+  position: relative;
 `;

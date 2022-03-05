@@ -14,6 +14,7 @@ import {
   MenuSection,
   BackgroundImage,
   BackgroundImageContainer,
+  ImageTilesContainer,
 } from "./styles";
 import PizzaVideo from "../../assets/pizzaVideo.mp4";
 import Button from "../../components/Button";
@@ -23,6 +24,11 @@ import Review from "../../components/Review";
 import AnimationContainer from "../../components/AnimationContainer";
 import MenuLogo from "../../assets/menuImage.png";
 import ColoredSpacer from "../../components/ColoredSpacer";
+import ImageTiles, { IImage } from "../../components/ImageTiles";
+import LemonadePhoto from "../../assets/lemonadePhoto.jpg";
+import PizzaPhoto from "../../assets/pizzaPhoto.jpg";
+import OilPhoto from "../../assets/oilPhoto.jpg";
+import v from "../../components/variables";
 
 const HomePage = () => {
   const openHours = [
@@ -33,6 +39,13 @@ const HomePage = () => {
     { text: "Piątek: 13:00-20:00" },
     { text: "Sobota: 13:00-21:00" },
     { text: "Niedziela: 13:00-20:00" },
+  ];
+
+  const menuImages: IImage[] = [
+    { text: "NAPOJE", src: `url(${LemonadePhoto})` },
+    { text: "PIZZA", src: `url(${PizzaPhoto})` },
+    { text: "SOSY", src: `url(${OilPhoto})` },
+    { text: "ZOBACZ PEŁNE MENU", fill: "white", textColor: v.green },
   ];
 
   return (
@@ -115,6 +128,12 @@ const HomePage = () => {
           </AnimationContainer>
         </BackgroundImageContainer>
       </MenuSection>
+
+      <DefaultSection marginOnTop={false}>
+        <ImageTilesContainer>
+          <ImageTiles images={menuImages} />
+        </ImageTilesContainer>
+      </DefaultSection>
     </>
   );
 };
