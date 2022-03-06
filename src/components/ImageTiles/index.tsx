@@ -15,10 +15,11 @@ interface IProps {
 const ImageTiles = ({ images }: IProps) => {
   return (
     <ImageTilesContainer>
-      {images.map((image) => (
+      {images.map((image, index) => (
         <TileContainer
           background={image.src || image.fill || "white"}
           textColor={image.textColor || "white"}
+          key={index}
         >
           {image.text}
         </TileContainer>
