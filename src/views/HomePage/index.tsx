@@ -29,6 +29,11 @@ import LemonadePhoto from "../../assets/lemonadePhoto.jpg";
 import PizzaPhoto from "../../assets/pizzaPhoto.jpg";
 import OilPhoto from "../../assets/oilPhoto.jpg";
 import v from "../../components/variables";
+import Steps from "../../components/Steps";
+import { IStep } from "../../components/Steps/Step";
+import { ReactComponent as CartIcon } from "../../assets/Cart icon.svg";
+import { ReactComponent as WalletIcon } from "../../assets/Wallet icon.svg";
+import { ReactComponent as MenuIcon } from "../../assets/Menu icon.svg";
 
 const HomePage = () => {
   const openHours = [
@@ -46,6 +51,24 @@ const HomePage = () => {
     { text: "PIZZA", src: `url(${PizzaPhoto})` },
     { text: "SOSY", src: `url(${OilPhoto})` },
     { text: "ZOBACZ PEŁNE MENU", fill: "white", textColor: v.green },
+  ];
+
+  const orderingSteps: IStep[] = [
+    {
+      image: <MenuIcon />,
+      title: "Wybierz danie",
+      description: "Wybierz danie oraz promocję",
+    },
+    {
+      image: <CartIcon />,
+      title: "Dodaj do koszyka",
+      description: "Bez rejestracji, mniej niż 30 sekund",
+    },
+    {
+      image: <WalletIcon />,
+      title: "Zapłać",
+      description: "Gotówka, karta, szybki przelew",
+    },
   ];
 
   return (
@@ -133,6 +156,10 @@ const HomePage = () => {
         <ImageTilesContainer>
           <ImageTiles images={menuImages} />
         </ImageTilesContainer>
+      </DefaultSection>
+
+      <DefaultSection>
+        <Steps steps={orderingSteps} />
       </DefaultSection>
     </>
   );
