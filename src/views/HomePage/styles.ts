@@ -43,12 +43,17 @@ export const InfoContainer = styled.div`
   }
 `;
 
-export const DefaultSection = styled.section<{ marginOnTop?: boolean }>`
-  margin: ${(props) => (props.marginOnTop ? "4em" : 0)} 1em 0 1em;
+export const DefaultSection = styled.section<{
+  marginOnTop?: boolean;
+  marginOnBottom?: boolean;
+}>`
+  margin: ${(props) => (props.marginOnTop ? "4em" : 0)} 1em
+    ${(props) => (props.marginOnBottom ? "4em" : 0)} 1em;
 `;
 
 DefaultSection.defaultProps = {
   marginOnTop: true,
+  marginOnBottom: false,
 };
 
 export const SmallSpacer = styled.div`
@@ -115,4 +120,14 @@ export const ImageContentContainer = styled.div`
 export const ImageTilesContainer = styled.div`
   margin-top: -5em;
   position: relative;
+`;
+
+export const OrderingStepsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  button {
+    font-size: 1.1em;
+  }
 `;

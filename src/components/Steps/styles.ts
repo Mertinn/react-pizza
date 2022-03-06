@@ -8,7 +8,7 @@ export const StyledList = styled.ul`
 
   li:not(:last-child)::after {
     content: "";
-    height: 50px;
+    height: 3em;
     width: 3px;
     background: rgba(0, 0, 0, 0.17);
     margin: 0.5em auto;

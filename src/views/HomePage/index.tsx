@@ -15,6 +15,7 @@ import {
   BackgroundImage,
   BackgroundImageContainer,
   ImageTilesContainer,
+  OrderingStepsContainer,
 } from "./styles";
 import PizzaVideo from "../../assets/pizzaVideo.mp4";
 import Button from "../../components/Button";
@@ -158,8 +159,13 @@ const HomePage = () => {
         </ImageTilesContainer>
       </DefaultSection>
 
-      <DefaultSection>
-        <Steps steps={orderingSteps} />
+      <DefaultSection marginOnBottom={true}>
+        <OrderingStepsContainer>
+          <Steps steps={orderingSteps} />
+          <Button>
+            ZAMÓW ONLINE <MdKeyboardArrowRight size={"1.5em"} />
+          </Button>
+        </OrderingStepsContainer>
       </DefaultSection>
     </>
   );
