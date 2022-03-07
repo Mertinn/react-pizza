@@ -14,7 +14,7 @@ const AnimationContainer = ({
   children,
 }: IProps) => {
   useEffect(() => {
-    AOS.init({ duration });
+    AOS.init({ duration, offset: 100 });
   }, [duration]);
 
   return <div data-aos={animationName}>{children}</div>;

@@ -160,7 +160,7 @@ const HomePage = () => {
       </DefaultSection>
 
       <DefaultSection marginOnBottom={true}>
-        <AnimationContainer animationName={"zoom-out-left"}>
+        <AnimationContainer animationName={"zoom-out-right"}>
           <OrderingStepsContainer>
             <Steps steps={orderingSteps} />
             <Button>
