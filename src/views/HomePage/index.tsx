@@ -12,7 +12,6 @@ import {
   ReviewsList,
   ImageContentContainer,
   MenuSection,
-  BackgroundImage,
   BackgroundImageContainer,
   ImageTilesContainer,
   OrderingStepsContainer,
@@ -35,6 +34,8 @@ import { IStep } from "../../components/Steps/Step";
 import { ReactComponent as CartIcon } from "../../assets/Cart icon.svg";
 import { ReactComponent as WalletIcon } from "../../assets/Wallet icon.svg";
 import { ReactComponent as MenuIcon } from "../../assets/Menu icon.svg";
+import { BackgroundImage } from "../../components/globalStyles";
+import Footer from "../../components/Footer";
 
 const HomePage = () => {
   const openHours = [
@@ -167,6 +168,8 @@ const HomePage = () => {
           </Button>
         </OrderingStepsContainer>
       </DefaultSection>
+
+      <Footer />
     </>
   );
 };

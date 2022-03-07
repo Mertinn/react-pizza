@@ -84,17 +84,6 @@ export const ReviewsList = styled.ul`
   gap: 1em;
 `;
 
-export const BackgroundImage = styled.div<{ src: string }>`
-  background: url(${(props) => props.src}) center;
-  background-size: cover;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
-`;
-
 export const BackgroundImageContainer = styled.div`
   position: relative;
   background: rgba(0, 0, 0, 0.8);
