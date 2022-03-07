@@ -19,6 +19,7 @@ export const SocialsList = styled.ul`
   gap: 2em;
 
   svg {
+    color: white;
     width: 2em;
     height: 2em;
   }

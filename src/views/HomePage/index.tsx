@@ -8,7 +8,6 @@ import {
   StyledVideo,
   VideoSection,
   VideoSectionContent,
-  SmallSpacer,
   ReviewsList,
   ImageContentContainer,
   MenuSection,
@@ -73,6 +72,18 @@ const HomePage = () => {
     },
   ];
 
+  const sampleReviews = [
+    { text: "Wspaniała pizza", author: "Karolina" },
+    {
+      text: "Świetna pizza, świeże składniki, doskonały smak. Polecam.",
+      author: "Andrzej",
+    },
+    {
+      text: "Wszystko sprawnie i pysznie, jedyny minus do którego mogę się przyczepić to dokładniejsze czytanie zamówienia, bo nie dostałam dodatkowego sosu. Ale pizza przepyszna.",
+      author: "Martyna",
+    },
+  ];
+
   return (
     <>
       <VideoSection>
@@ -105,9 +116,9 @@ const HomePage = () => {
             <InfoBox title={"Kontakt"} description={"+48 000 000 000"} />
           </InfoContainer>
         </AnimationContainer>
+      </DefaultSection>
 
-        <SmallSpacer />
-
+      <DefaultSection>
         <AnimationContainer animationName={"fade-right"}>
           <ReviewsHeader>
             <ReviewsTitle>Opinie klientów</ReviewsTitle>
@@ -116,25 +127,11 @@ const HomePage = () => {
           </ReviewsHeader>
 
           <ReviewsList>
-            <li>
-              <Review text={"Wspaniała pizza"} author={"Karolina"} />
-            </li>
-            <li>
-              <Review
-                text={
-                  "Świetna pizza, świeże składniki, doskonały smak. Polecam."
-                }
-                author={"Marcin"}
-              />
-            </li>
-            <li>
-              <Review
-                text={
-                  "Wszystko sprawnie i pysznie, jedyny minus do którego mogę się przyczepić to dokładniejsze czytanie zamówienia, bo nie dostałam dodatkowego sosu. Ale pizza przepyszna."
-                }
-                author={"Karolina"}
-              />
-            </li>
+            {sampleReviews.map((review) => (
+              <li>
+                <Review text={review.text} author={review.author} />
+              </li>
+            ))}
           </ReviewsList>
         </AnimationContainer>
       </DefaultSection>
@@ -155,18 +152,22 @@ const HomePage = () => {
       </MenuSection>
 
       <DefaultSection marginOnTop={false}>
-        <ImageTilesContainer>
-          <ImageTiles images={menuImages} />
-        </ImageTilesContainer>
+        <AnimationContainer animationName={"flip-up"} duration={800}>
+          <ImageTilesContainer>
+            <ImageTiles images={menuImages} />
+          </ImageTilesContainer>
+        </AnimationContainer>
       </DefaultSection>
 
       <DefaultSection marginOnBottom={true}>
-        <OrderingStepsContainer>
-          <Steps steps={orderingSteps} />
-          <Button>
-            ZAMÓW ONLINE <MdKeyboardArrowRight size={"1.5em"} />
-          </Button>
-        </OrderingStepsContainer>
+        <AnimationContainer animationName={"zoom-out-left"}>
+          <OrderingStepsContainer>
+            <Steps steps={orderingSteps} />
+            <Button>
+              ZAMÓW ONLINE <MdKeyboardArrowRight size={"1.5em"} />
+            </Button>
+          </OrderingStepsContainer>
+        </AnimationContainer>
       </DefaultSection>
 
       <Footer />

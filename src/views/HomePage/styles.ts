@@ -56,10 +56,6 @@ DefaultSection.defaultProps = {
   marginOnBottom: false,
 };
 
-export const SmallSpacer = styled.div`
-  padding: 1em;
-`;
-
 export const ReviewsHeader = styled.div`
   display: flex;
   flex-direction: column;

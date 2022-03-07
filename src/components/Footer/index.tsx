@@ -15,13 +15,19 @@ const Footer = () => {
 
         <SocialsList>
           <li>
-            <FaInstagram />
+            <a href="https://instagram.com" target="_blank">
+              <FaInstagram />
+            </a>
           </li>
           <li>
-            <FaFacebookSquare />
+            <a href="https://facebook.com" target="_blank">
+              <FaFacebookSquare />
+            </a>
           </li>
           <li>
-            <FaTwitterSquare />
+            <a href="https://twitter.com" target="_blank">
+              <FaTwitterSquare />
+            </a>
           </li>
         </SocialsList>
       </TextContainer>
