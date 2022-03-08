@@ -9,3 +9,8 @@ export const fullCenteredText = css`
   flex-direction: column;
   text-align: center;
 `;
+
+export const borderAndShadow = css`
+  box-shadow: -7px 7px 0 rgba(0, 0, 0, 0.09);
+  border: 1px solid rgba(191, 191, 191, 0.56);
+`;

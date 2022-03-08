@@ -8,5 +8,5 @@ export const DropdownContainer = styled.div<{
   max-height: ${(props) => (props.isShown ? props.maxHeight + "px" : 0)};
   overflow: hidden;
   transition: 0.5s;
-  ${(props) => props.additionalStyles}
+  ${(props) => props.additionalStyles};
 `;
