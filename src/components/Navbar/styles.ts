@@ -41,7 +41,9 @@ export const NavbarContainer = styled.nav<{ isShrunk: boolean }>`
 
   @media (min-width: 600px) {
     font-size: clamp(0.65rem, 1.7vw, 1.05rem);
-    height: calc(${v.navbarHeight} + 6vh);
+    height: calc(
+      ${v.navbarHeight} + ${(props) => (props.isShrunk ? "3vh" : "6vh")}
+    );
     padding: 0 3em;
     ${LinksList} {
       display: flex;
