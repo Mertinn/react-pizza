@@ -6,7 +6,6 @@ import {
   SidebarItemContainer,
   SidebarItemHeader,
   StyledLink,
-  dropdownItemStyles,
 } from "./styles";
 
 interface IProps {
@@ -46,7 +45,6 @@ const SidebarItem = ({
           List={StyledDropdownList}
           elements={dropdownItemsNode}
           isShown={isShown}
-          containerStyles={dropdownItemStyles}
           approxElementHeight={45}
         />
       )}

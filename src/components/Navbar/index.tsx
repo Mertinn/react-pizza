@@ -10,6 +10,7 @@ import PizzaLogo from "../../assets/logo.png";
 import { FaBars } from "react-icons/fa";
 import Sidebar from "../Sidebar";
 import NavbarLink from "./NavbarLink";
+import v from "../variables";
 
 const Navbar = () => {
   const [isSidebarShown, setIsSidebarShown] = useState(false);
@@ -43,7 +44,11 @@ const Navbar = () => {
 
         <LinksList>
           <li>
-            <NavbarLink isDropdown={true} url={"/#"}>
+            <NavbarLink
+              isDropdown={true}
+              url={"/#"}
+              dropdownItems={v.mainDropdownItems}
+            >
               Start
             </NavbarLink>
           </li>

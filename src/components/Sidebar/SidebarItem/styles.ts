@@ -20,13 +20,10 @@ export const SidebarItemHeader = styled.div`
   }
 `;
 
-export const dropdownItemStyles = css`
-  padding-left: 0.5em;
-  padding-top: 0.5em;
-`;
-
 export const StyledDropdownList = styled.ul`
   list-style-type: none;
+  padding-left: 0.5em;
+  padding-top: 0.5em;
 
   li::before {
     content: "\\2022";

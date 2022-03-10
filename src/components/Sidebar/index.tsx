@@ -4,6 +4,7 @@ import SidebarItem from "./SidebarItem";
 import { IoClose } from "react-icons/io5";
 import Button from "../Button";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import v from "../variables";
 
 interface IProps {
   isShown: boolean;
@@ -11,12 +12,6 @@ interface IProps {
 }
 
 const Sidebar = ({ isShown, setIsShown }: IProps) => {
-  const mainDropdownItems = [
-    { title: "Strona główna", link: "/" },
-    { title: "O nas", link: "/" },
-    { title: "Opinie", link: "/" },
-  ];
-
   return (
     <SidebarContainer isShown={isShown}>
       <TopPanel>
@@ -28,7 +23,7 @@ const Sidebar = ({ isShown, setIsShown }: IProps) => {
           <SidebarItem
             title={"Start"}
             isDropdown={true}
-            dropdownItems={mainDropdownItems}
+            dropdownItems={v.mainDropdownItems}
           />
         </li>
         <li>
