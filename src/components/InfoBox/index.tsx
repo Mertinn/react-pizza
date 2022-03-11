@@ -7,7 +7,6 @@ import {
 } from "./styles";
 import { RiArrowDownSLine } from "react-icons/ri";
 import DropdownList from "../DropdownList";
-import { StyledLink } from "../Sidebar/SidebarItem/styles";
 
 interface IProps {
   title: string;

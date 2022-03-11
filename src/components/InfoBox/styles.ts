@@ -8,6 +8,9 @@ export const InfoBoxContainer = styled.div`
   font-size: 0.7rem;
   text-align: center;
   padding: 2em;
+  @media (min-width: 900px) {
+    padding: 2em 4em;
+  }
 `;
 
 export const InfoBoxTitle = styled.h1`
@@ -21,6 +24,7 @@ export const InfoBoxDescription = styled.h1`
   gap: 0.5em;
   svg {
     transition: transform 400ms;
+    cursor: pointer;
   }
 `;
 

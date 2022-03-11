@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { NavbarLinkContainer, StyledDropdownList } from "./styles";
 import { RiArrowDownSLine } from "react-icons/ri";
 import DropdownList from "../../DropdownList";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 interface IProps {
   url: string;
@@ -18,17 +18,19 @@ const NavbarLink = ({
   dropdownItems = [],
 }: IProps) => {
   const [isDropdownShown, setIsDropdownShown] = useState(false);
+  const history = useNavigate();
 
   const dropdownItemsNode = dropdownItems.map((item) => (
     <Link to={item.link}>{item.title}</Link>
   ));
 
+  const handleClick = () => {
+    if (isDropdown) setIsDropdownShown(!isDropdownShown);
+    history(url);
+  };
+
   return (
-    <NavbarLinkContainer
-      onClick={
-        isDropdown ? () => setIsDropdownShown(!isDropdownShown) : undefined
-      }
-    >
+    <NavbarLinkContainer onClick={handleClick}>
       <h1>
         {children}
         {isDropdown && (

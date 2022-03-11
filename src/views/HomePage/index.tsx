@@ -142,7 +142,7 @@ const HomePage = () => {
           <AnimationContainer animationName={"zoom-in-up"}>
             <ImageContentContainer>
               <h1>Wybierz do pizzy 1 sos gratis</h1>
-              <ColoredSpacer width={"20%"} color="white" />
+              <ColoredSpacer width={"4em"} color="white" />
               <Button>
                 MENU <MdKeyboardArrowRight size={"1.5em"} />
               </Button>
@@ -151,13 +151,11 @@ const HomePage = () => {
         </BackgroundImageContainer>
       </MenuSection>
 
-      <DefaultSection marginOnTop={false}>
-        <AnimationContainer animationName={"flip-up"} duration={800}>
-          <ImageTilesContainer>
-            <ImageTiles images={menuImages} />
-          </ImageTilesContainer>
-        </AnimationContainer>
-      </DefaultSection>
+      <AnimationContainer animationName={"flip-up"} duration={800}>
+        <ImageTilesContainer>
+          <ImageTiles images={menuImages} />
+        </ImageTilesContainer>
+      </AnimationContainer>
 
       <DefaultSection marginOnBottom={true}>
         <AnimationContainer animationName={"zoom-out-right"}>

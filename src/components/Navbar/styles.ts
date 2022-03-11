@@ -39,7 +39,7 @@ export const NavbarContainer = styled.nav<{ isShrunk: boolean }>`
   top: 0;
   z-index: 999;
 
-  @media (min-width: 600px) {
+  @media (min-width: ${v.desktopWidth}) {
     font-size: clamp(0.65rem, 1.7vw, 1.05rem);
     height: calc(
       ${v.navbarHeight} + ${(props) => (props.isShrunk ? "3vh" : "6vh")}
@@ -59,9 +59,15 @@ export const NavbarContainer = styled.nav<{ isShrunk: boolean }>`
 
 export const NavbarButton = styled.button`
   ${borderAndShadow};
+  cursor: pointer;
   border-radius: 5px;
   padding: 0.5em 1em;
   background: transparent;
   text-transform: uppercase;
   font-size: 1.2em;
+  transition: 500ms;
+  &:hover {
+    box-shadow: 0 0 0 0 transparent;
+    background: rgba(0, 0, 0, 0.09);
+  }
 `;

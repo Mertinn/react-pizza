@@ -35,6 +35,7 @@ export const InfoContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: start;
 
   @media (min-width: 700px) {
     & > *:not(:last-child) {
@@ -78,6 +79,13 @@ export const ReviewsList = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 1em;
+  @media (min-width: ${v.desktopWidth}) {
+    flex-direction: row;
+    padding: 0 5em;
+    li {
+      flex: 1 1 0;
+    }
+  }
 `;
 
 export const BackgroundImageContainer = styled.div`
@@ -100,11 +108,17 @@ export const ImageContentContainer = styled.div`
     font-size: 1.5em;
     text-transform: uppercase;
   }
+  @media (min-width: ${v.desktopWidth}) {
+    padding: 12em 2em;
+  }
 `;
 
 export const ImageTilesContainer = styled.div`
   margin-top: -5em;
   position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 0 2em;
 `;
 
 export const OrderingStepsContainer = styled.div`

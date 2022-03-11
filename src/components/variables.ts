@@ -6,6 +6,7 @@ const v = {
     { title: "O nas", link: "/" },
     { title: "Opinie", link: "/" },
   ],
+  desktopWidth: "600px",
 };
 
 export default v;
