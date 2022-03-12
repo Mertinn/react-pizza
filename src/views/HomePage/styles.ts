@@ -81,7 +81,8 @@ export const ReviewsList = styled.ul`
   gap: 1em;
   @media (min-width: ${v.desktopWidth}) {
     flex-direction: row;
-    padding: 0 5em;
+    max-width: 80%;
+    margin: 2em auto 0 auto;
     li {
       flex: 1 1 0;
     }
