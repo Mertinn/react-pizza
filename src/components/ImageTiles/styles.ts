@@ -15,6 +15,14 @@ export const TileContainer = styled.div<{
   width: 50%;
   text-align: center;
   font-size: 1.8em;
+  transition: 500ms;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.3);
+    z-index: 1;
+    letter-spacing: 0.15em;
+  }
 `;
 
 export const ImageTilesContainer = styled.div`

@@ -10,6 +10,7 @@ const Button = styled.button`
   font-size: 0.9em;
   display: flex;
   align-items: center;
+  cursor: pointer;
 `;
 
 export default Button;
