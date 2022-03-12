@@ -14,6 +14,7 @@ import {
   BackgroundImageContainer,
   ImageTilesContainer,
   OrderingStepsContainer,
+  StepsHeaderContainer,
 } from "./styles";
 import PizzaVideo from "../../assets/pizzaVideo.mp4";
 import Button from "../../components/Button";
@@ -158,6 +159,10 @@ const HomePage = () => {
       </AnimationContainer>
 
       <DefaultSection marginOnBottom={true}>
+        <StepsHeaderContainer>
+          <h1>ZAMÓW PRZEZ INTERNET</h1>
+          <p>nowy sposób zamawiania jedzonka!</p>
+        </StepsHeaderContainer>
         <AnimationContainer animationName={"zoom-out-right"}>
           <OrderingStepsContainer>
             <Steps steps={orderingSteps} />

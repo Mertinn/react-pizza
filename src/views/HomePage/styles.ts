@@ -130,3 +130,13 @@ export const OrderingStepsContainer = styled.div`
     font-size: 1.1em;
   }
 `;
+
+export const StepsHeaderContainer = styled.div`
+  text-align: center;
+  margin-bottom: 4em;
+  font-size: 1.2em;
+  h1 {
+    font-weight: normal;
+    letter-spacing: 0.15em;
+  }
+`;

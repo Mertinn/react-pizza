@@ -14,13 +14,19 @@ export const StyledList = styled.ul`
 
     @media (min-width: ${v.desktopWidth}) {
       display: flex;
+      align-items: center;
+      gap: 1em;
+
       & > svg {
         display: block;
         color: rgba(0, 0, 0, 0.3);
       }
 
-      &:nth-child(even) > svg {
-        transform: scaleY(-1);
+      &:nth-child(odd) {
+        margin-top: -3em;
+        & > svg {
+          transform: scaleY(-1);
+        }
       }
     }
   }
