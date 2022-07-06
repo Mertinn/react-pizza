@@ -124,7 +124,7 @@ const HomePage = () => {
           <ReviewsHeader>
             <ReviewsTitle>Opinie klientów</ReviewsTitle>
             <p>99,2% klientów jest z nas zadowolonych!</p>
-            <StyledLink to={"/reviews"}>Zobacz wszystkie opinie</StyledLink>
+            <StyledLink href={"/#"}>Zobacz wszystkie opinie</StyledLink>
           </ReviewsHeader>
 
           <ReviewsList>

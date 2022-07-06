@@ -22,7 +22,7 @@ const SidebarItem = ({
   const [isShown, setIsShown] = useState(false);
 
   const dropdownItemsNode = dropdownItems.map((item) => (
-    <StyledLink to={item.link}>{item.title}</StyledLink>
+    <StyledLink href={item.link}>{item.title}</StyledLink>
   ));
 
   return (

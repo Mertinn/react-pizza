@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components";
-import { Link } from "react-router-dom";
 import v from "../../variables";
 
 export const SidebarItemContainer = styled.div`
@@ -42,7 +41,7 @@ export const StyledDropdownList = styled.ul`
   }
 `;
 
-export const StyledLink = styled(Link)`
+export const StyledLink = styled.a`
   text-decoration: none;
   color: ${v.green};
 `;

@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import v from "../../components/variables";
-import { Link } from "react-router-dom";
 import { fullCenteredText } from "../../components/mixins";
 
 export const StyledVideo = styled.video`
@@ -68,7 +67,7 @@ export const ReviewsTitle = styled.h1`
   text-transform: uppercase;
 `;
 
-export const StyledLink = styled(Link)`
+export const StyledLink = styled.a`
   color: ${v.green};
   text-decoration: none;
 `;
@@ -79,6 +78,7 @@ export const ReviewsList = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 1em;
+
   @media (min-width: ${v.desktopWidth}) {
     flex-direction: row;
     max-width: 80%;
